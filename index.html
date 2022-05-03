@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hangman</title>
+</head>
+
+<body>
+    <h1>Hangman</h1>
+    <p> Find the hidden word - Enter a letter</p>
+    <div class="gameContainer">
+        <svg height="250" width="200" class="figureContainer">
+            <!-- rod -->
+            <line x1="60" y1="20" x2="140" y2="20"></line>
+            <line x1="140" y1="20" x2="140" y2="50"></line>
+            <line x1="60" y1="20" x2="60" y2="230"></line>
+            <line x1="20" y1="230" x2="100" y2="230"></line>
+
+            <!-- Head -->
+            <circle cx="140" cy="70" r="20" class="figurePart"></circle>
+            <!-- Body -->
+            <line x1="140" y1="90" x2="140" y2="150" class="figurePart"></line>
+            <!-- Arms -->
+            <line x1="140" y1="120" x2="120" y2="100" class="figurePart"></line>
+            <line x1="140" y1="120" x2="160" y2="100" class="figurePart"></line>
+            <!-- legs -->
+            <line x1="140" y1="150" x2="120" y2="180" class="figurePart"></line>
+            <line x1="140" y1="150" x2="160" y2="180" class="figurePart"></line>
+        </svg>
+
+        <div class="wrongLettersContainer">
+            <div id="WrongLetters">
+                <p>Wrong</p>
+                <span> r,t,g,w</span>
+            </div>
+        </div>
+
+        <div class="word" id="word">
+            <div class="letter">h</div>
+            <div class="letter">e</div>
+            <div class="letter">l</div>
+            <div class="letter">l</div>
+            <div class="letter">o</div>
+        </div>
+    </div>
+
+    <!-- container for final message -->
+
+    <div class="popUpContainer" id="popUpContainer">
+        <div class="popUp">
+            <h2 id="finalMessage">You Have Won</h2>
+            <button id="playBotton">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notificationContainer" id="notificationContainer">
+        <p>You have already entered this letter</p>
+    </div>
+</body>
+
+</html>
